@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 01</title>
+</head>
+<body>
+    <div id="res">
+
+    </div>
+
+    <script>
+        let res = document.getElementById('res')
+
+        var nome = prompt('Qual seu nome?')
+        var idade = prompt('Qual sua idade?')
+        var cidade = prompt('Qual a sua cidade?')
+
+        var i = Number(idade)
+
+        res.innerHTML = `<p>O nome é ${nome}</p><p>A idade é ${i}</p>A cidade é ${cidade}</p>`
+    </script>
+</body>
+</html>

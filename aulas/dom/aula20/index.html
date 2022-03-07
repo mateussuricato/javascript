@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 20</title>
+    <style>
+        .conteudo > h1 > span {
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .conteudo > p {
+            overflow: hidden;
+            height: 10px;
+            transition: 1s;
+        }
+        .mostrar {
+            height: 200px !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteudo">
+        <h1>Título do conteúdo <span>Ver mais!</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptatum dignissimos dolores quidem expedita velit ullam error quam quo sunt adipisci dolore voluptas et molestiae, incidunt, tenetur atque praesentium non! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta velit molestias, eaque autem error dolorum quos quas odit tempora corrupti minima nemo quasi vitae itaque? Repellendus maiores odio optio reprehenderit?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo quas placeat accusamus eveniet mollitia! Ex, impedit, tenetur nulla dolorem deserunt adipisci quisquam corrupti aut, minima similique eveniet. Excepturi, ex nulla? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quas iusto harum beatae error iste at excepturi voluptas. Quod commodi non quasi tempora nostrum adipisci illum deleniti distinctio quibusdam a! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sapiente dolorem accusantium deserunt officiis unde nulla consequuntur repudiandae debitis sed harum eum veniam voluptates perferendis praesentium amet, sit dolore saepe! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit eos id, provident exercitationem reiciendis sequi perspiciatis mollitia labore voluptas quia, quas qui. Eligendi unde voluptatem perferendis obcaecati, voluptatum maxime blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio mollitia tempore cupiditate ratione rem veniam quaerat voluptatibus vero, laudantium optio placeat nisi, quo quam rerum doloribus repudiandae soluta natus hic.</p>
+    </div>
+    <script>
+        var span = document.querySelector('.conteudo span')
+        
+        span.addEventListener('click', function() {
+           var conteudo = document.querySelector('.conteudo p')
+            if(conteudo.classList.contains('mostrar')) {
+                span.innerHTML = 'Ver mais!'
+                conteudo.classList.remove('mostrar')
+            } else {
+                span.innerHTML = 'Ver menos!'
+                conteudo.classList.add('mostrar')
+            }
+
+        })
+     
+       
+
+    </script>
+</body>
+</html>
